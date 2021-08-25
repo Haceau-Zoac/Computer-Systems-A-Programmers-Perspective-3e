@@ -3,6 +3,7 @@
 #endif // _MSC_VER
 
 #include <stdio.h>
+#include <string.h>
 
 typedef unsigned char *byte_pointer;
 
@@ -43,6 +44,10 @@ int main(void)
     int test = 0;
     scanf("%d", &test);
     test_show_bytes(test);
+
+    char str[1024];
+    scanf("%1024s", str);
+    show_bytes(str, strlen(str));
 
     return 0;
 }
